@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: home-assistant
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: home-assistant
+  template:
+    metadata:
+      labels:
+        app: home-assistant
+    spec:
+      containers:
+      - name: home-assistant
+        image: linuxserver/homeassistant
+        resources:
+          limits:
+            memory: "2Gi"
+            cpu: "2000m"
+        ports:
+        - containerPort: 8123
+          protocol: TCP
