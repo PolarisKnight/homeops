@@ -1,0 +1,40 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unifi-controller
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: unifi-controller
+  template:
+    metadata:
+      labels:
+        app: unifi-controller
+    spec:
+      containers:
+      - name: unifi-controller
+        image: linuxserver/unifi-network-application
+        resources:
+          limits:
+            memory: "4Gi"
+            cpu: "2000m"
+        ports:
+        - containerPort: 8443
+          protocol: TCP 
+    
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: unifi-controller
+spec:
+  selector:
+    app: unifi-controller
+  ports:
+  - protocol: TCP
+    port: 8443
+    targetPort: 8443
+    nodePort: 31443
+  type: NodePort

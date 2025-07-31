@@ -35,5 +35,7 @@ spec:
   - protocol: TCP
     port: 8123
     targetPort: 8123
-  type: ClusterIP
+    nodePort: 31823
+  type: NodePort
 ---
+
