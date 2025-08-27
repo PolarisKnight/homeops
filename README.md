@@ -1,4 +1,4 @@
-# README: Fleet in a Rancher RKE2 Cluster
+# Fleet in a Rancher RKE2 Cluster
 
 Welcome to the repository for managing my homelab Kubernetes cluster using Rancher Fleet! This project is part of my journey to learn and experiment with GitOps principles, Kubernetes, and modern infrastructure management practices.
 
@@ -45,4 +45,4 @@ Feel free to explore and learn alongside me!
 
 ### Disclaimer:
 
-This readme was written by generative AI
+This readme was written by generative AI and reviewed by me.
