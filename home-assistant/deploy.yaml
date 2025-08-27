@@ -1,4 +1,10 @@
 ---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: home-assistant
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,6 +35,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: home-assistant
+  namespace: home-assistant
 spec:
   selector:
     app: home-assistant 
@@ -38,5 +45,4 @@ spec:
     targetPort: 8123
     nodePort: 31823
   type: NodePort
----
 
