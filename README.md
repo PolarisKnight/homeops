@@ -1,14 +1,14 @@
-# README: Flux in K3s Cluster
+# README: Fleet in a Rancher RKE2 Cluster
 
-Welcome to the repository for managing my homelab Kubernetes cluster using Flux! This project is part of my journey to learn and experiment with GitOps principles, Kubernetes, and modern infrastructure management practices.
+Welcome to the repository for managing my homelab Kubernetes cluster using Rancher Fleet! This project is part of my journey to learn and experiment with GitOps principles, Kubernetes, and modern infrastructure management practices.
 
 ---
 
 ## About This Project
 
-This repository is a key component of my homelab setup, where I use Flux to:
+This repository is a key component of my homelab setup, where I use Rancher + Fleet to:
 
-- Automate deployments and configurations for my K3s cluster.
+- Automate deployments and configurations for my RKE2 cluster.
 - Explore GitOps workflows and best practices.
 - Experiment with Kubernetes-based application management.
 
@@ -16,12 +16,12 @@ The homelab serves as a sandbox environment for testing tools, learning new conc
 
 ---
 
-## Why Flux?
+## Why Fleet?
 
-Flux is a powerful GitOps tool that simplifies cluster management by:
+Fleet is a powerful GitOps tool that simplifies cluster management by:
 
 - **Declarative Configurations**: All cluster state is stored in Git, making changes auditable and reversible.
-- **Continuous Reconciliation**: Flux continuously ensures the cluster matches the desired state.
+- **Continuous Reconciliation**: Fleet continuously ensures the cluster matches the desired state.
 - **Scalability**: Ideal for small setups like this homelab or large-scale production environments.
 
 ---
@@ -34,18 +34,9 @@ Flux is a powerful GitOps tool that simplifies cluster management by:
 
 ---
 
-## Repository Structure
-
-- **clusters/my-cluster**: Contains Kubernetes manifests for the cluster.
-- **flux-system**: Configuration for Flux components.
-- **applications/**: Manifests for apps deployed in the cluster.
-
----
-
-
 ## Acknowledgments
 
-This project is inspired by the vibrant Kubernetes and GitOps communities. Special thanks to the Flux maintainers and contributors for creating such an excellent tool for modern infrastructure management.
+This project is inspired by the vibrant Kubernetes and GitOps communities. Special thanks to the Rancher Fleet maintainers and contributors for creating such an excellent tool for modern infrastructure management.
 
 ---
 
@@ -54,4 +45,4 @@ Feel free to explore and learn alongside me!
 
 ### Disclaimer:
 
-This readme was written by generative AI and reviewed by me.
+This readme was written by generative AI
