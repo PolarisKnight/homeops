@@ -1,4 +1,4 @@
 ---
-  namespace: home-assistant
-  defaultNamespace: home-assistant
+namespace: home-assistant
+defaultNamespace: home-assistant
 
