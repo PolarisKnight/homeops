@@ -1,5 +1,4 @@
 ---
-targets:
-  - name: all
-    clusterSelector: {}
-    namespace: home-assistant
+  namespace: home-assistant
+  defaultNamespace: home-assistant
+
