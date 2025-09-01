@@ -1,12 +1,12 @@
-# ArgoCD in a Rancher RKE2 Cluster
+# Argo CD in a Rancher RKE2 Cluster
 
-Welcome to the repository for managing my homelab Kubernetes cluster using Rancher + ArgoCD! This project is part of my journey to learn and experiment with GitOps principles, Kubernetes, and modern infrastructure management practices. As someone who has a background in IT operations utilizing VMs and Docker containers, this is a logical next step for my learning.
+Welcome to the repository for managing my homelab Kubernetes cluster using Rancher + Argo CD! This project is part of my journey to learn and experiment with GitOps principles, Kubernetes, and modern infrastructure management practices. As someone who has a background in IT operations utilizing VMs and Docker containers, this is a logical next step for my learning.
 
 ---
 
 ## About This Project
 
-This repository is a key component of my homelab setup, where I use Rancher + ArgoCD to:
+This repository is a key component of my homelab setup, where I use Rancher + Argo CD to:
 
 - Automate deployments and configurations for my RKE2 cluster.
 - Explore GitOps workflows and best practices.
@@ -16,9 +16,9 @@ The homelab serves as a sandbox environment for testing tools, learning new conc
 
 ---
 
-## Why ArgoCD?
+## Why Argo CD?
 
-ArgoCD is a powerful, mature and popular GitOps tool that simplifies cluster management by:
+Argo CD is a powerful, mature and popular GitOps tool that simplifies cluster management by:
 
 - **Declarative Configurations**: All cluster state is stored in Git, making changes auditable and reversible.
 - **Continuous Reconciliation**: Fleet continuously ensures the cluster matches the desired state.
