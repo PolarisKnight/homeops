@@ -33,7 +33,7 @@ spec:
       volumes:
       - name: home-assistant-data
         persistentVolumeClaim:
-          claimName: homeops
+          claimName: cloudops
 ---
 apiVersion: v1
 kind: Service
