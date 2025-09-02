@@ -34,9 +34,9 @@ spec:
       - name: home-assistant-data
         persistentVolumeClaim:
           claimName: home-assistant 
-          volumeMounts:
-          - mountPath: /config
-            name: home-assistant-data
+      volumeMounts:
+      - name: home-assistant-data
+        mountPath: /config
 ---
 apiVersion: v1
 kind: Service
