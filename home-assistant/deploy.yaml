@@ -30,6 +30,10 @@ spec:
         ports:
         - containerPort: 8123
           protocol: TCP
+      volumes:
+      - name: home-assistant-data
+        persistentVolumeClaim:
+          claimName: homeops
 ---
 apiVersion: v1
 kind: Service
