@@ -30,14 +30,14 @@ spec:
         ports:
         - containerPort: 8123
           protocol: TCP
+        volumeMounts:
+        - name: home-assistant-data
+          mountPath: /config
       volumes:
       - name: home-assistant-data
         persistentVolumeClaim:
           claimName: home-assistant 
-      volumeMounts:
-      - name: home-assistant-data
-        mountPath: /config
----
+     
 apiVersion: v1
 kind: Service
 metadata:
