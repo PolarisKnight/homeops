@@ -2,8 +2,8 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: cloudops
-  namespace: argocd
+  name: home-assistant
+  namespace: home-assistant
 spec:
   accessModes:
     - ReadWriteOnce
