@@ -20,6 +20,8 @@ spec:
       labels:
         app: home-assistant
     spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
       - name: home-assistant
         image: linuxserver/homeassistant
@@ -37,19 +39,19 @@ spec:
       - name: home-assistant-data
         persistentVolumeClaim:
           claimName: home-assistant 
---- 
-apiVersion: v1
-kind: Service
-metadata:
-  name: home-assistant
-  namespace: home-assistant
-spec:
-  selector:
-    app: home-assistant 
-  ports:
-  - protocol: TCP
-    port: 8123
-    targetPort: 8123
-    nodePort: 31823
-  type: NodePort
+#--- 
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: home-assistant
+#  namespace: home-assistant
+#spec:
+#  selector:
+#    app: home-assistant 
+#  ports:
+#  - protocol: TCP
+#    port: 8123
+#    targetPort: 8123
+#    nodePort: 31823
+#  type: NodePort
 
