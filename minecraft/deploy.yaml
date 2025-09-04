@@ -28,6 +28,7 @@ spec:
           value: "PAPER"
         - name: MOTD
           value: "Powered by Kubernetes"
+        - name: EULA
           value: "TRUE"
         - name: MEMORY
           value: "2G"
