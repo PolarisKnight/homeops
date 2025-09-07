@@ -31,7 +31,7 @@ spec:
         - name: EULA
           value: "TRUE"
         - name: MEMORY
-          value: "2G"
+          value: "5G"
         ports:
         - containerPort: 25565
           protocol: TCP
