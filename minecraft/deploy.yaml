@@ -32,6 +32,8 @@ spec:
           value: "TRUE"
         - name: MEMORY
           value: "5G"
+        - name: "VIEW_DISTANCE"
+          value: "16"
         ports:
         - containerPort: 25565
           protocol: TCP
