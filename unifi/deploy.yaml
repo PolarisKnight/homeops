@@ -29,6 +29,9 @@ spec:
           protocol: UDP
         - containerPort: 10001 # device discovery
           protocol: UDP
+        volumeMounts:
+          - name: unifi-config
+            mountPath: /config
     
 ---
 apiVersion: v1
@@ -44,3 +47,17 @@ spec:
     port: 8443
     targetPort: 8443
   type: LoadBalancer
+
+
+---
+apiVersion: v1 
+kind: persistentVolumeClaim
+metadata:
+  name: unifi-pvc
+  namespace: infra
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
