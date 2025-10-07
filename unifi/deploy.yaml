@@ -34,6 +34,10 @@ spec:
       labels:
         app: unifi-controller
     spec:
+      volumes:
+      - name: unifi-config
+        persistentVolumeClaim:
+          claimName: unifi-pvc
       containers:
       - name: unifi-controller
         image: linuxserver/unifi-network-application
@@ -50,13 +54,11 @@ spec:
           protocol: UDP
         - containerPort: 10001 # device discovery
           protocol: UDP
+       
         volumeMounts:
           - name: unifi-config
             mountPath: /config
-        volumes:
-        - name: unifi-config
-          persistentVolumeClaim:
-            claimName: unifi-pvc
+    
     
 ---
 apiVersion: v1
