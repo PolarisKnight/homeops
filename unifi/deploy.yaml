@@ -21,8 +21,14 @@ spec:
             memory: "4Gi"
             cpu: "2000m"
         ports:
-        - containerPort: 8443
+        - containerPort: 8443 # web UI
           protocol: TCP 
+        - containerPort: 8080 # device adoption
+          protocol: TCP
+        - containerPort: 3478 # STUN
+          protocol: UDP
+        - containerPort: 10001 # device discovery
+          protocol: UDP
     
 ---
 apiVersion: v1
