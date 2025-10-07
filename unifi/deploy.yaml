@@ -42,7 +42,7 @@ spec:
           claimName: unifi-pvc
       containers:
       - name: unifi-controller
-        image: jacobalberty/unifi
+        image: linuxserver/unifi-network-application
         resources:
           limits:
             memory: "4Gi"
