@@ -46,6 +46,10 @@ spec:
         volumeMounts:
           - name: unifi-config
             mountPath: /config
+        volumes:
+        - name: unifi-config
+          persistentVolumeClaim:
+            claimName: unifi-pvc
     
 ---
 apiVersion: v1
