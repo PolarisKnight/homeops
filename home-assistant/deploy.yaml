@@ -35,10 +35,16 @@ spec:
         volumeMounts:
         - name: home-assistant-data
           mountPath: /config
+        - name: zigbee-antenna
+          mountPath: /dev/ttyUSB0
       volumes:
       - name: home-assistant-data
         persistentVolumeClaim:
           claimName: home-assistant 
+      - name: zigbee-antenna
+        hostPath:
+          path: /dev/ttyUSB0
+          type: charDevice
 #--- 
 #apiVersion: v1
 #kind: Service

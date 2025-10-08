@@ -81,3 +81,17 @@ spec:
   type: LoadBalancer
 
 
+---
+apiVersion: apps/v1
+type: Deployment
+metadata:
+  name: unifi-mongo
+  namespace: infra
+  labels:
+    app.kubernetes.io/managed-by: argocd
+    app.kubernetes.io/part-of: unifi-controller
+spec:
+  containers:
+  - name: unifi-mopngo
+    image: mongo 
+    
