@@ -46,7 +46,6 @@ spec:
       - name: zigbee-antenna
         hostPath:
           path: /dev/ttyUSB0
-          type: "CharDevice"
 #--- 
 #apiVersion: v1
 #kind: Service
