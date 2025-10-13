@@ -22,6 +22,8 @@ spec:
     spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
+      nodeSelector: # pick the node it will be deployed on
+        kubernetes.io/hostname: kube-control
       containers:
       - name: home-assistant
         image: linuxserver/homeassistant
