@@ -25,6 +25,8 @@ spec:
       containers:
       - name: home-assistant
         image: linuxserver/homeassistant
+        securityContext:
+          privileged: true
         resources:
           limits:
             memory: "2Gi"
