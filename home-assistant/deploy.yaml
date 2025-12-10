@@ -27,6 +27,9 @@ spec:
       containers:
       - name: home-assistant
         image: linuxserver/homeassistant
+        env:
+          - name: TZ
+            value: "America/Denver"
         securityContext:
           privileged: true
         resources:
@@ -48,6 +51,7 @@ spec:
       - name: zigbee-antenna
         hostPath:
           path: /dev/ttyUSB0
+    
 #--- 
 #apiVersion: v1
 #kind: Service
