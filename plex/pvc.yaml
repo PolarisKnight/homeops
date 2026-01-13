@@ -18,10 +18,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: plex-config
   namespace: media-servers
-  spec:
-    accessModes:
-      - ReadWriteOnce
-    resources:
-      requests:
-        storage: 4Gi 
-    storageClassName: longhorn
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 4Gi 
+  storageClassName: longhorn
