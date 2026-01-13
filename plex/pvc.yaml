@@ -4,13 +4,13 @@ kind: PersistentVolumeClaim
 metadata:
   name: media
   namespace: media-servers
-  spec:
-    accessModes:
-      - ReadWriteOnce
-    resources:
-      requests:
-        storage: 1000Gi
-    storageClassName: longhorn
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1000Gi
+  storageClassName: longhorn
 
 ---
 apiVersion: v1
