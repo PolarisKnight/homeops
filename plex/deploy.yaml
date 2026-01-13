@@ -25,10 +25,8 @@ spec:
         - containerPort: 32400
           protocol: TCP
         volumeMounts:
-        - name: tv-shows
-          mountPath: /tv
-        - name: movies
-          mountPath: /movies
+        - name: media
+          mountPath: /media
         - name: plex-config
           mountPath: /config
       # VOLUMES belongs under 'spec', aligned with 'containers'
