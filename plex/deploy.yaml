@@ -31,10 +31,7 @@ spec:
           mountPath: /config
       # VOLUMES belongs under 'spec', aligned with 'containers'
       volumes:
-      - name: tv-shows
-        persistentVolumeClaim:
-          claimName: media
-      - name: movies
+      - name: media
         persistentVolumeClaim:
           claimName: media
       - name: plex-config
