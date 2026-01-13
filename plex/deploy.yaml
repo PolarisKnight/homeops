@@ -26,9 +26,11 @@ spec:
           protocol: TCP
         volumeMounts:
         - name: tv-shows
-          mountPath: /tv 
+          mountPath: /tv
+          subPath: tv
         - name: movies
           mountPath: /movies
+          subPath: movies
         - name: plex-config
           mountPath: /config
       # VOLUMES belongs under 'spec', aligned with 'containers'
