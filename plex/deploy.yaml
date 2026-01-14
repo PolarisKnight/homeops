@@ -20,6 +20,8 @@ spec:
         env:
         - name: TZ
           value: "America/Denver"
+        - name: PLEX_CLAIM
+          value: "claim-hJ1gQr72mk6gT3js_A_p"
         # PORTS and MOUNTS belong INSIDE the container list
         ports:
         - containerPort: 32400
