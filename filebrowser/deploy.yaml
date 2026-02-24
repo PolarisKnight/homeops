@@ -23,11 +23,16 @@ spec:
           protocol: TCP
         volumeMounts:
         - name: media
-          mountPath: /media
+          mountPath: /srv
+        - name: fb-media-config
+          mountPath: /config
       volumes:
       - name: media 
         persistentVolumeClaim:
           claimName: media
+      - name: fb-media-config
+        persistentVolumeClaim:
+          claimName: fb-media-config 
 ---
 apiVersion: v1 
 kind: Service
