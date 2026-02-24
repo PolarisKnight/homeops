@@ -2,7 +2,7 @@
 apiVersion: v1 
 kind: PersistentVolumeClaim
 metadata:
-  name: fb-media-config
+  name: fbMediaConfig
   namespace: media-servers
 spec:
   accessModes:
@@ -48,7 +48,7 @@ spec:
           claimName: media
       - name: fb-media-config
         persistentVolumeClaim:
-          claimName: fb-media-config 
+          claimName: fbMediaConfig
 ---
 apiVersion: v1 
 kind: Service
