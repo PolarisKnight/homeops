@@ -92,6 +92,6 @@ metadata:
     app.kubernetes.io/part-of: unifi-controller
 spec:
   containers:
-  - name: unifi-mopngo
+  - name: unifi-mongo
     image: mongo 
     

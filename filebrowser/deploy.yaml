@@ -1,0 +1,48 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: filebrowser-media
+  namespace: media-servers
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: filebrowser
+  template:
+    metadata:
+      labels:
+        app: filebrowser
+    spec:
+      containers:
+      - name: filebrowser
+        image: filebrowser/filebrowser
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        volumeMounts:
+        - name: media
+          mountPath: /media
+      volumes:
+      - name: media 
+        persistentVolumeClaim:
+          claimName: media
+---
+apiVersion: v1 
+kind: Service
+metadata:
+  name: filebrowser-media
+  namespace: media-servers 
+spec:
+  selector:
+    app: filebrowser 
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+    protocol: TCP
+
+---
+apiVersion: networking.k8s.io/v1
+        
