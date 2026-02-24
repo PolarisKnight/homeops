@@ -2,14 +2,14 @@
 apiVersion: v1 
 kind: PersistentVolumeClaim
 metadata:
-  name: fbMediaConfig
+  name: fb-media-config
   namespace: media-servers
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1GB
+      storage: 1Gi
   storageClassName: longhorn
 
 
@@ -48,7 +48,7 @@ spec:
           claimName: media
       - name: fb-media-config
         persistentVolumeClaim:
-          claimName: fbMediaConfig
+          claimName: fb-media-config 
 ---
 apiVersion: v1 
 kind: Service
