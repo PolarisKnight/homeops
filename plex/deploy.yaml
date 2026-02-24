@@ -19,7 +19,7 @@ spec:
         image: linuxserver/plex
         envFrom:
         - configMapRef:
-          name: plex-config
+            name: plex-config
         # PORTS and MOUNTS belong INSIDE the container list
         ports:
         - containerPort: 32400
