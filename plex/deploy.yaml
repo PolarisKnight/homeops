@@ -17,11 +17,9 @@ spec:
       containers:
       - name: plex
         image: linuxserver/plex
-        env:
-        - name: TZ
-          value: "America/Denver"
-        - name: PLEX_CLAIM
-          value: "claim-hJ1gQr72mk6gT3js_A_p"
+        envFrom:
+        - ConfigMapRef:
+          name: plex-config
         # PORTS and MOUNTS belong INSIDE the container list
         ports:
         - containerPort: 32400

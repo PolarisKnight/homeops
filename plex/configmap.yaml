@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: plex-config
+  namespace: media-servers # Make sure this matches deployment ns
+data:
+  # linuxserver.io specific vars
+  PUID: "1000"
+  GUID: "1000"
+  TZ: "America/Denver"
+  VERSION: "Docker" # This stops Plex from updating internally. ArgoCD will handle it.
+
+
+  # Plex core vars
+  ALLOWED_NETWORKS: "10.118.0.0/24"
+
+  ADVERTISE_IP: "10.118.0.245"
+
+
