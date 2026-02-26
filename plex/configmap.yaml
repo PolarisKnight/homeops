@@ -15,6 +15,6 @@ data:
   # Plex core vars
   ALLOWED_NETWORKS: "10.118.0.0/24"
 
-  # ADVERTISE_IP: "10.118.0.240"
+  ADVERTISE_IP: "10.118.0.241"
 
 
