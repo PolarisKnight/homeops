@@ -12,13 +12,13 @@ spec:
     targetRevision: 82.15.1
     helm:
       valueFiles:
-        -prometheus-values.yaml # as seen in 'charts'
-    destination:
+        - prometheus-values.yaml # as seen in 'charts'
+  destination:
       server: https://kubernetes.default.svc
       namespace: monitoring
-    syncPolicy:
+  syncPolicy:
       automated:
         prune: true
-        sealHeal: true
+        selfHeal: true
       syncOptions:
         - CreateNamespace=true
