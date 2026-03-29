@@ -12,7 +12,7 @@ spec:
     targetRevision: 82.15.1
     helm:
       valueFiles:
-        - $values/homeops/prometheus/prometheus-values.yaml # as seen in 'charts'
+        - $values/prometheus/prometheus-values.yaml # as seen in 'charts'
   - repoURL: https://github.com/PolarisKnight/homeops
     targetRevision: HEAD 
     ref: values # this means that the URL will represent $values
