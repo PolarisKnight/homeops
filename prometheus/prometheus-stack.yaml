@@ -6,13 +6,16 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://prometheus-community.github.io/helm-charts
+  sources: # use 'source' if only referencing a single source
+  - repoURL: https://prometheus-community.github.io/helm-charts
     chart: kube-prometheus-stack # as seen in the 'charts' directory in the repo
     targetRevision: 82.15.1
     helm:
       valueFiles:
-        - prometheus-values.yaml # as seen in 'charts'
+        - $values/homeops/prometheus/prometheus-values.yaml # as seen in 'charts'
+  - repoURL: https://github.com/PolarisKnight/homeops
+    targetRevision: HEAD 
+    ref: values # this means that the URL will represent $values
   destination:
       server: https://kubernetes.default.svc
       namespace: monitoring
