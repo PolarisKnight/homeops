@@ -9,5 +9,11 @@ prometheus:
     retention: 7d
   enabled: true
 
+prometheusOperator:
+  tls:
+    enabled: false
+  admissionWebhooks:
+    enabled: false
+
 alertmanager:
   enabled: false
