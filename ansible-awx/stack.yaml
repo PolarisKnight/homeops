@@ -7,9 +7,9 @@ metadata:
 spec:
   project: default
   sources:
-    - repoURL: https://ansible-community.github.io/awx-operator-helm/
+    - repoURL: https://ansible-community.github.io/awx-operator-helm/charts
       chart: awx-operator 
-      targetRevision: awx-operator-3.2.1
+      targetRevision: HEAD
       helm:
         valueFiles:
           - $values/ansible-awx/values.yaml
