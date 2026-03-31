@@ -1,0 +1,32 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kube-awx-stack
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: https://ansible-community.github.io/awx-operator-helm/
+      chart: awx-operator 
+      targetRevision: HEAD
+      helm:
+        valueFiles:
+          - $values/ansible-awx/values.yaml
+    - repoURL: https://github.com/PolarisKnight/homeops 
+      targetRevision: HEAD
+      ref: values
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: platform
+  syncPolicy:
+    automated: 
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true 
+
+
+
+  
