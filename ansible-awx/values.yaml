@@ -1,4 +1,11 @@
 AWX:
+
+  enabled: true
+  name: awx
+  spec:
+    admin_user: admin 
+
+
   postgres:
     enabled: true
     postgresqlDatabase: awx 
