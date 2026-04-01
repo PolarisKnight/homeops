@@ -1,8 +1,9 @@
-postgres:
-  enabled: true
-  postgresqlDatabase: awx 
-  postgresqlUsername: awx 
-  postgresqlPassword: changeme 
-  persistence:
+AWX:
+  postgres:
     enabled: true
-    size: 5Gi
+    postgresqlDatabase: awx 
+    postgresqlUsername: awx 
+    postgresqlPassword: changeme 
+    persistence:
+      enabled: true
+      size: 5Gi
