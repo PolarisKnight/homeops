@@ -10,5 +10,5 @@ AWX:
     enabled: true
     host: postgresql-stack
     dbName: awx
-    username: admin 
+    username: awx 
     password: "changeme"
