@@ -1,0 +1,12 @@
+global:
+
+  auth:
+    postgresPassword: "changeme"
+    username: "admin"
+    password: "changeme"
+    database: "awx"
+   # existingSecret: ""
+   # secretKeys:
+   #   adminPasswordKey: ""
+   #   userPasswordKey: ""
+   #   replicationPasswordKey: ""
