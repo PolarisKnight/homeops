@@ -1,12 +1,10 @@
-global:
-
-  auth:
-    postgresPassword: "changeme"
-    username: "admin"
-    password: "changeme"
-    database: "awx"
-   # existingSecret: ""
-   # secretKeys:
-   #   adminPasswordKey: ""
-   #   userPasswordKey: ""
-   #   replicationPasswordKey: ""
+auth:
+  postgresPassword: "changeme"
+  username: "awx"
+  password: "changeme"
+  database: "awx"
+  # existingSecret: ""
+  # secretKeys:
+  #   adminPasswordKey: ""
+  #   userPasswordKey: ""
+  #   replicationPasswordKey: ""
