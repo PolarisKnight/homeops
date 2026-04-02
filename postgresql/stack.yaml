@@ -26,3 +26,8 @@ spec:
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true 
+  ignoreDifferences:
+    - group: ""
+      kind: Secret 
+      jsonPointers:
+        - /data # tells ArgoCD ot ignore any changes to secrets
