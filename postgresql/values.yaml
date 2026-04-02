@@ -9,5 +9,8 @@ auth:
   #   userPasswordKey: ""
   #   replicationPasswordKey: ""
 
-service:
-  type: LoadBalancer
+
+primary:
+  service:
+    type: LoadBalancer
+  
